@@ -16,7 +16,7 @@ type Stream struct {
 
 type Seg struct {
 	Duration  float64 `json:"duration"`
-	Size      int     `json:"size"`
+	Size      int64   `json:"size"`
 	BackupURL string  `json:"backupUrl"`
 	URL       string  `json:"url"`
 }

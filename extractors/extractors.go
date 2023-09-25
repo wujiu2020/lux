@@ -7,20 +7,20 @@ import (
 
 	"github.com/pkg/errors"
 	"github.com/wujiu2020/lux/extractors/cctv"
+	"github.com/wujiu2020/lux/extractors/douyin"
 	"github.com/wujiu2020/lux/extractors/proto"
 	"github.com/wujiu2020/lux/utils"
-	// "github.com/wujiu2020/lux/extractors/douyin"
 	// "github.com/wujiu2020/lux/extractors/iqiyi"
 	// "github.com/wujiu2020/lux/extractors/qq"
 )
 
 func init() {
-	// douyin := douyin.New()
-	// Register("douyin", douyin)
-	// Register("iesdouyin", douyin)
 	// Register("iqiyi", iqiyi.New(iqiyi.SiteTypeIqiyi))
 	// Register("iq", iqiyi.New(iqiyi.SiteTypeIQ))
 	// Register("qq", qq.New())
+	douyin := douyin.New()
+	Register("douyin", douyin)
+	Register("iesdouyin", douyin)
 	Register("cctv", cctv.New())
 }
 

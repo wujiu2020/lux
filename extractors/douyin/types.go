@@ -1,5 +1,10 @@
 package douyin
 
+import (
+	"github.com/wujiu2020/lux/extractors/proto"
+	"github.com/wujiu2020/lux/request"
+)
+
 type douyinData struct {
 	StatusCode  int `json:"status_code"`
 	AwemeDetail struct {
@@ -496,4 +501,28 @@ type douyinData struct {
 		Now   int64  `json:"now"`
 		Logid string `json:"logid"`
 	} `json:"extra"`
+}
+
+func (v douyinData) TransformData(url string, quality string) *proto.Data {
+	urlData := make([]proto.Seg, 0)
+	realURL := v.AwemeDetail.Video.PlayAddr.URLList[0]
+	totalSize, _ := request.Size(realURL, url)
+	urlData = append(urlData, proto.Seg{
+		URL:      realURL,
+		Size:     totalSize,
+		Duration: float64(v.AwemeDetail.Duration) / float64(1000),
+	})
+
+	streams := []proto.Stream{
+		{
+			Quality: "default",
+			Segs:    urlData,
+			Referer: url,
+		},
+	}
+	return &proto.Data{
+		Duration: float64(v.AwemeDetail.Duration),
+		Streams:  streams,
+		Title:    v.AwemeDetail.PreviewTitle,
+	}
 }

@@ -27,6 +27,13 @@ func TestExtract(t *testing.T) {
 				quality: "270P",
 			},
 		},
+		{
+			name: "cctv",
+			args: args{
+				u:       "https://www.douyin.com/video/6967223681286278436?previous_page=main_page&tab_name=home",
+				quality: "270P",
+			},
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
