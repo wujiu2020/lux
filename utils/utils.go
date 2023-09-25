@@ -16,7 +16,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/iawia002/lux/request"
+	"github.com/wujiu2020/lux/request"
 )
 
 // MatchOneOf match one of the patterns
@@ -62,7 +62,7 @@ func Domain(url string) string {
 	domainPattern := `([a-z0-9][-a-z0-9]{0,62})\.` +
 		`(com\.cn|com\.hk|` +
 		`cn|com|net|edu|gov|biz|org|info|pro|name|xxx|xyz|be|` +
-		`me|top|cc|tv|tt)`
+		`me|top|tv|tt)`
 	domain := MatchOneOf(url, domainPattern)
 	if domain != nil {
 		return domain[1]

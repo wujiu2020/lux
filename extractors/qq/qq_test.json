@@ -1,0 +1,37 @@
+{
+    "url": "https://v.qq.com/x/cover/mzc00200fjo16c3/o00474v68ks.html",
+    "site": "腾讯视频 v.qq.com",
+    "title": "好事成双_02",
+    "type": "video",
+    "streams": [
+        {
+            "id": "sd",
+            "quality": "流畅;(270P)",
+            "segs": [
+                {
+                    "url": "http://116.140.44.97/vlive.qqvideo.tc.qq.com/ALKddZ0Fo3gKnNfngluHGKft42K-szBPxh95tHKCab_4/B_JxNyiJmktHRgresXhfyMelLyUNgJvfg-j7ZT9VwMfNOhASIQ9fZ0rOJbgLH09CY1/svp_50112/gzc_1000102_0b53kiackaaasyaenmyjqzs4auwdevpaaika.f100001.mp4?vkey=DD53193F60F5FA9526C40FB024E6418B730DF41E6B78A763B54ACC2CA40CA28269D0C84F01EAD0B62B96A8745CDA6D63C6F9539BAB1A7D50F6141FC289B43FDA54B0D2FA41F8CAB98EAA4527FD0E29DCD3720135B7C5197A9AAA492F0535D7E6E24FF5E32CB399A176298DB2A7DBB096EECB27BAEEDD016D56E8D032D3265C7C8212AE24694ACF57",
+                    "backupUrl": "",
+                    "size": 8800212,
+                    "ext": "mp4"
+                }
+            ],
+            "size": 8800212,
+            "ext": ""
+        },
+        {
+            "id": "hd",
+            "quality": "标清;(480P)",
+            "segs": [
+                {
+                    "url": "http://116.140.44.97/vlive.qqvideo.tc.qq.com/ALKddZ0Fo3gKnNfngluHGKft42K-szBPxh95tHKCab_4/B_JxNyiJmktHRgresXhfyMelLyUNgJvfg-j7ZT9VwMfNOhASIQ9fZ0rOJbgLH09CY1/svp_50112/gzc_1000102_0b53kiackaaasyaenmyjqzs4auwdevpaaika.f2.mp4?vkey=DB70735285AC446FF5A18B993F3B196EB9176347DD5A07FDB26A0DDD697253EBCCC47418B92B3AF99E67B6CBA115B59E7E91394ED662343C3DD6515BFD712A6CB5E37E72405301EA607DED9346B3DF72046E23908FEA897CB82DD7828EC9CA0926C8F5091F408465ABEFAD7D29C3D821F02CD4878FBAFAEE312BCB85E26B42859B7F689F9637B0DE",
+                    "backupUrl": "",
+                    "size": 18018071,
+                    "ext": "mp4"
+                }
+            ],
+            "size": 18018071,
+            "ext": ""
+        }
+    ],
+    "err": null
+}

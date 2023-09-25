@@ -1,0 +1,20 @@
+{
+    "duration": 0,
+    "streams": [
+        {
+            "referer": "https://tv.cctv.com/2023/09/22/VIDE8sRmWWCCr56IOLpRYTSj230922.shtml?spm=C53156045404.PKXC0xLPAnP9.0.0",
+            "useragent": "",
+            "segs": [
+                {
+                    "duration": 0,
+                    "size": 0,
+                    "backupUrl": "",
+                    "url": "https://vod.cntv.myhwcdn.cn/flash/mp4video63/TMS/2023/09/22/d6624c2708a4479fa32abac000fabf5e_h264818000nero_aac32.mp4"
+                }
+            ],
+            "type": "",
+            "quality": "480P"
+        }
+    ],
+    "title": "[新闻直播间]宁夏银川 第六届中国—阿拉伯国家博览会举办"
+}
