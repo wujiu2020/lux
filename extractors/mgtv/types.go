@@ -125,6 +125,4 @@ func (v mgtv) TransformData(url string, quality string) (*proto.Data, error) {
 		Duration: 10,
 		Streams:  streams,
 	}, nil
-
-	return nil, nil
 }
