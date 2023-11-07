@@ -1,0 +1,98 @@
+{
+    "data": {
+        "sourceTicket": "",
+        "bulletCommentMask": "/vod.do?pm=KJTeO6oEZ5XVuRm1z1oqJ5~Erbr5luG04I~huf4URPn0OV3vxcBoU5Dk2lvqrHwAdqRF~PAimZ6FuWt8hyF4_1cGNt7mzPcTufBAUOOb3fkMo3bPhMpBsgW1TAp6rp4cW~l7uuhgpc3nsrjvnkDLSxcN48BBy~5_fjnrH7cKhKFxcYGdt78TZNBwwL5h4hmqsctNUiv8l0LiU5haqCmVTzy3ATyRtmeUwK2nJI0pdtdpGeGgRZclFaNKNd6NLjrdtVPHV6SZTUJXYrguDbY1vqXfKNPGjEgzdapvyQRYCe_XjxxaFJ1EdYGDcMf6EKTfGb7lyylzUMoEVk4EBO47giPEUW9GmaXy40voDr7QhS_3KoyM_sZ2~XxB74sKO4_4&fid=1C1C94DEDB299AD21848A0F23A491A09&gsid=8c30a336a0b04dfbbdb26ca72d2ed269",
+        "stream": [
+            {
+                "standardName": "标清",
+                "def": "1",
+                "videoFormat": "H264",
+                "audioTrack": 2,
+                "defLevel": 0,
+                "scale": "16:9",
+                "barName": "标清",
+                "filebitrate": "485",
+                "audioFormat": "AAC",
+                "url": "/atcl?pm2=D~CZpcpsIzSDlxED1X9JZC0pDSeCF336AryXH7mvLq5gPOgOUW3G9T60Vtu0QLdX1CqbZe2xLmZCEe726kEwCDbWp_HB6Oi29Gmf2kTYnew2XtO9qIaNZNCpO3yYd0VpxSADq19BkIppyeAB35APeW1XlUPv53jtC4dYEKlodWvzMp7rv9ITEartR5DmnLsUtkCdgUDr8gpz6Ys~ADVtIcjwkCggz6sAktpGgMSs6Xa8y8YPDmkxYtgtruGomBKjvlAcZPa4o6IZm7WCk9MOBkZIvVF7mDAUWuNUNkguf6qjLb0KZVyQuY9awZ9RfMOQ3OZQhUkWd658xcC1EvwSwKRml9chPYilDzX609WZblMAwrVaGqiYd7O3Gb5ikMarEgyKXSrXBrLPERk99D0PnQTVuK2CiJDA8pVujA_cn3zX5KPxryF45rKlKPelDByMS37Iz8NCDPL6nMXkwF_FndWQto_BeH45ZeaanWc7DaYKoNdZF8rWfyDyh83espSWjoiRJ4Ab7ldqKonS&gsid=b0f8aa64-854a-4c0b-a1fb-9f431fcb1216&pno=1000&arange=0",
+                "name": "标清",
+                "fileformat": "HLS-TS",
+                "vip": "0",
+                "fileStartTime": "1.48"
+            },
+            {
+                "standardName": "高清",
+                "def": "2",
+                "videoFormat": "H264",
+                "audioTrack": 2,
+                "defLevel": 0,
+                "scale": "16:9",
+                "barName": "高清",
+                "filebitrate": "782",
+                "audioFormat": "AAC",
+                "url": "/atcl?pm2=ehMtLz5rDFK1tcBUWl~5tOu2eZkvUYoO1GXW9nXDA~fpM0CfA9GOugRC5ECXvfK~9XjueYJ8Pgtn~IaZOwmp0Kk1b1Y3ul4wiMAPe0xPKiayzpZ0oLgRRFA04bxoSiLdz57PQUGh9P425_xkdnvNjLuGcSngglYkksY6F59UQqo_CZQJHMqvhMt6zsF4O4VY5YB57V8~wenrOy5tup_KcUw6yv62l6l5CcXyHf0A1UVRbx1L39zjXqXjnk3Jb~QJiWpytFwZkzEW5jujusD_fUEM~RMlsT0a2292KzMlk8lb~r4ONO1x3voeqrjk3jWld~tPPtsPu6x1DIkHFJlrHeSCUt0QN3qiQpoKM0ics83sIzOWHeaHpGaOVkJCmoF6c5q~v1NABImHiVA7zl~U7wBvJ75V3fGrYzZtvRGMbGFVqq627ReXgq8jfZn2lH6agn4gZbYFiT1iiUD~IOn_IGT4r2GvvFNtCpmD9OBYs1fsWf845RqMf2c0aqNn01XAY2wNytwWRWvEHPg_&gsid=0a7fae43-fa40-47a7-8868-9dd9f8be0b78&pno=1000&arange=0",
+                "name": "高清",
+                "fileformat": "HLS-TS",
+                "vip": "0",
+                "fileStartTime": "1.48"
+            },
+            {
+                "standardName": "超清",
+                "def": "3",
+                "videoFormat": "H264",
+                "audioTrack": 2,
+                "defLevel": 0,
+                "scale": "16:9",
+                "barName": "超清",
+                "filebitrate": "1212",
+                "audioFormat": "AAC",
+                "url": "/atcl?pm2=coVff_eYP3DGM_qc2lZYOf7bWkiuB8lSO6gfJKwCjmXrqIE2peaUrWd5XABdjLKbFZQi5Po3Sd7LIKwvdbRSGfO~h_543BEeCuoo4~J1m~HfeoGVhmR17qVmXDFgdhj~BuLkCKbKna3BOynkhlTpoTedshd3b7d8vT5duauRoX448s5KpHuTKToYe4cOObisFIztqgEgAd0Ag6OdcvPf0r6WhK7_xejnSr2qMmgRMKi0SThfEdnqlKTc8ZL2jJLQHdbpr3p0ZFZ9kPNPP8PmjVKT4KvmSOb7D9LgDD5Xx1z9rH3MH3vxQySw1xPlVJMkNTn4HRFHeAeNJxPGOm1yQTBpE1MQoZSSXSy7W1ZT7HIoa_QYwZo_GAWp9yiw41CFFVEcquFPdxrVRvU9AwwZ5M9T_OX6wBQqsCPzpRew67acTjff~R82rLlqYOEs7SzoV0vLrrRUUY5wsuQOKpSIdGaBZfpxX43uYzvWsbyvqzC0WtXPS82DpNBDlKrT13kkAX8qz3Adgp09n6EC&gsid=fe720f39-7dba-4667-a4d5-6ec1d25fc615&pno=1000&arange=0",
+                "name": "超清",
+                "fileformat": "HLS-TS",
+                "vip": "0",
+                "fileStartTime": "1.48"
+            },
+            {
+                "standardName": "蓝光",
+                "def": "4",
+                "videoFormat": "H264",
+                "audioTrack": 2,
+                "defLevel": 0,
+                "scale": "16:9",
+                "barName": "蓝光",
+                "filebitrate": "2271",
+                "audioFormat": "AAC",
+                "url": "",
+                "name": "蓝光",
+                "fileformat": "HLS-TS",
+                "vip": "1",
+                "fileStartTime": "1.48"
+            }
+        ],
+        "stream_mpd": null,
+        "tk2": "-gTO0YTNzkTO2ETPsFmd",
+        "stream_domain": [
+            "http://web-disp.titan.mgtv.com",
+            "http://web-disp1.titan.mgtv.com",
+            "http://web-disp2.titan.mgtv.com"
+        ],
+        "abrStream": [],
+        "abrConfig": {
+            "checkInterval": 60,
+            "selectAbr": false,
+            "fts": "1400",
+            "swithLimit": {
+                "up": 2,
+                "down": 2
+            },
+            "enableAbr": false,
+            "maxIdleQuality": -999,
+            "minCheckInterval": 30,
+            "minIdleQuality": 1,
+            "algorithm": 0
+        }
+    },
+    "code": 200,
+    "msg": "",
+    "seqid": "8acef7b3860847f59a82d2168cff8c80",
+    "timestamp": 1699342040724
+}

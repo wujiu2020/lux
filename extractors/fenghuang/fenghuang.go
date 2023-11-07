@@ -17,7 +17,7 @@ type extractor struct{}
 
 // Extract is the main function to extract the data.
 func (e *extractor) Extract(url string) (proto.TransformData, error) {
-	var vedioInfo VedioInfo
+	var videoInfo VideoInfo
 	html, err := request.Get(url, "", nil)
 	if err != nil {
 		return nil, err
@@ -27,8 +27,8 @@ func (e *extractor) Extract(url string) (proto.TransformData, error) {
 	if len(match) < 2 {
 		return nil, errors.New("have no mathc url")
 	}
-	if err := json.Unmarshal([]byte(match[1]), &vedioInfo); err != nil {
+	if err := json.Unmarshal([]byte(match[1]), &videoInfo); err != nil {
 		return nil, errors.New("have no match format")
 	}
-	return vedioInfo, nil
+	return videoInfo, nil
 }

@@ -1,9 +1,7 @@
-package kuaishou
+package mgtv
 
 import (
 	"testing"
-
-	"github.com/wujiu2020/lux/extractors/proto"
 )
 
 func Test_extractor_Extract(t *testing.T) {
@@ -14,25 +12,24 @@ func Test_extractor_Extract(t *testing.T) {
 		name    string
 		e       *extractor
 		args    args
-		want    proto.TransformData
 		wantErr bool
 	}{
 		{
-			name: "kuaishou1",
+			name: "mgtv",
 			args: args{
-				url: "https://v.kuaishou.com/diUCxC",
+				url: "https://www.mgtv.com/b/354045/10948467.html",
 			},
 		},
 		{
-			name: "kuaishou2",
+			name: "mgtv",
 			args: args{
-				url: "https://v.kuaishou.com/hiZKok",
+				url: "https://www.mgtv.com/b/388252/15472835.html",
 			},
 		},
 		{
-			name: "kuaishou3",
+			name: "mgtv",
 			args: args{
-				url: "https://v.kuaishou.com/gJ6yQL",
+				url: "https://www.mgtv.com/b/401876/15491442.html",
 			},
 		},
 	}
@@ -44,9 +41,8 @@ func Test_extractor_Extract(t *testing.T) {
 				t.Errorf("extractor.Extract() error = %v, wantErr %v", err, tt.wantErr)
 				return
 			}
-			_, err = got.TransformData(tt.args.url, "")
-			if (err != nil) != tt.wantErr {
-				t.Errorf("extractor.Extract() error = %v, wantErr %v", err, tt.wantErr)
+			if _, err := got.TransformData(tt.args.url, ""); err != nil {
+				t.Errorf("got.TransformData() error = %v, wantErr %v", err, tt.wantErr)
 				return
 			}
 		})

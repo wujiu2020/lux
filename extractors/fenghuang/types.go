@@ -2,7 +2,7 @@ package fenghuang
 
 import "github.com/wujiu2020/lux/extractors/proto"
 
-type VedioInfo struct {
+type VideoInfo struct {
 	VSource        string `json:"vSource"`
 	CommentURL     string `json:"commentUrl"`
 	Base62ID       string `json:"base62Id"`
@@ -66,7 +66,7 @@ type VedioInfo struct {
 	Summary      string `json:"summary"`
 }
 
-func (v VedioInfo) TransformData(url string, quality string) (*proto.Data, error) {
+func (v VideoInfo) TransformData(url string, quality string) (*proto.Data, error) {
 	return &proto.Data{
 		Duration: v.Duration,
 		Streams: []proto.Stream{

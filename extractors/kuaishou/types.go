@@ -1,56 +1,55 @@
 package kuaishou
 
 import (
-	"regexp"
-	"strings"
-
-	"github.com/pkg/errors"
 	"github.com/wujiu2020/lux/extractors/proto"
-	"github.com/wujiu2020/lux/request"
-	"github.com/wujiu2020/lux/utils"
 )
 
-type kuaishou string
+type VideoInfo struct {
+	ID             int     `json:"id"`
+	Duration       float64 `json:"duration"`
+	Representation []struct {
+		ID         int      `json:"id"`
+		URL        string   `json:"url"`
+		BackupURL  []string `json:"backupUrl"`
+		MaxBitrate int      `json:"maxBitrate"`
+		AvgBitrate int      `json:"avgBitrate"`
+		Width      int      `json:"width"`
+		Height     int      `json:"height"`
+		FrameRate  int      `json:"frameRate"`
+		Quality    float64  `json:"quality"`
+		KvqScore   struct {
+			Fr     float64 `json:"FR"`
+			Nr     float64 `json:"NR"`
+			FRPost int     `json:"FRPost"`
+			NRPost int     `json:"NRPost"`
+		} `json:"kvqScore"`
+		QualityType     string `json:"qualityType"`
+		QualityLabel    string `json:"qualityLabel"`
+		FeatureP2Sp     bool   `json:"featureP2sp"`
+		Hidden          bool   `json:"hidden"`
+		DisableAdaptive bool   `json:"disableAdaptive"`
+		DefaultSelect   bool   `json:"defaultSelect"`
+		Comment         string `json:"comment"`
+		HdrType         int    `json:"hdrType"`
+		FileSize        int    `json:"fileSize"`
+	} `json:"representation"`
+}
 
-func (v kuaishou) TransformData(url string, quality string) (*proto.Data, error) {
-	titles := utils.MatchOneOf(string(v), `<title>([^<]+)</title>`)
-	if titles == nil || len(titles) < 2 {
-		return nil, errors.New("can not found title")
-	}
-
-	title := regexp.MustCompile(`\n+`).ReplaceAllString(strings.TrimSpace(titles[1]), " ")
-
-	qualityRegMap := map[string]*regexp.Regexp{
-		"sd": regexp.MustCompile(`"photoUrl":\s*"([^"]+)"`),
-	}
-
-	streams := make([]proto.Stream, 0)
-	for quality, qualityReg := range qualityRegMap {
-		matcher := qualityReg.FindStringSubmatch(string(v))
-		if len(matcher) != 2 {
-			return nil, errors.WithStack(proto.ErrURLParseFailed)
-		}
-
-		u := strings.ReplaceAll(matcher[1], `\u002F`, "/")
-
-		size, err := request.Size(u, url)
-		if err != nil {
-			return nil, errors.WithStack(err)
-		}
-
-		urlData := proto.Seg{
-			URL:  u,
-			Size: size,
-		}
-		streams = append(streams, proto.Stream{
-			Segs:    []proto.Seg{urlData},
-			Quality: quality,
+func (v VideoInfo) TransformData(url string, quality string) (*proto.Data, error) {
+	var segs []proto.Seg
+	for _, item := range v.Representation {
+		segs = append(segs, proto.Seg{
+			Duration: v.Duration,
+			URL:      item.URL,
 		})
 	}
-
 	return &proto.Data{
-		Duration: 10,
-		Streams:  streams,
-		Title:    title,
+		Duration: v.Duration,
+		Streams: []proto.Stream{
+			{
+				Segs: segs,
+			},
+		},
+		Title: "",
 	}, nil
 }
