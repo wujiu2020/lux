@@ -41,7 +41,7 @@ package bilibili
 // type extractor struct{}
 
 // // Extract is the main function to extract the data.
-// func (e *extractor) Extract(url string) (*proto.Data, error) {
+// func (e *extractor) Extract(url string) (proto.TransformData, error) {
 // 	var err error
 // 	html, err := request.Get(url, referer, nil)
 // 	if err != nil {
@@ -56,7 +56,7 @@ package bilibili
 // 	return extractNormalVideo(url, html)
 // }
 
-// func extractBangumi(url, html string) (*proto.Data, error) {
+// func extractBangumi(url, html string) (proto.TransformData, error) {
 // 	dataString := utils.MatchOneOf(html, `<script\s+id="__NEXT_DATA__"\s+type="application/json"\s*>(.*?)</script\s*>`)[1]
 // 	epMapString := utils.MatchOneOf(dataString, `"epMap"\s*:\s*(.+?)\s*,\s*"initEpList"`)[1]
 // 	fullVideoIdString := utils.MatchOneOf(dataString, `"videoId"\s*:\s*"(ep|ss)(\d+)"`)
@@ -115,7 +115,7 @@ package bilibili
 // 	return bilibiliDownload(options), nil
 // }
 
-// func extractNormalVideo(url, html string) (*proto.Data, error) {
+// func extractNormalVideo(url, html string) (proto.TransformData, error) {
 // 	pageData, err := getMultiPageData(html)
 // 	if err != nil {
 // 		return nil, errors.WithStack(err)
@@ -155,7 +155,7 @@ package bilibili
 // 	return bilibiliDownload(options), nil
 // }
 
-// func bilibiliDownload(options bilibiliOptions) *proto.Data {
+// func bilibiliDownload(options bilibiliOptions) proto.TransformData {
 // 	var (
 // 		err  error
 // 		html string

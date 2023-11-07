@@ -1,7 +1,6 @@
-package douyin
+package kuaishou
 
 import (
-	_ "embed"
 	"encoding/json"
 	"fmt"
 	"testing"
@@ -15,14 +14,27 @@ func Test_extractor_Extract(t *testing.T) {
 	}
 	tests := []struct {
 		name    string
+		e       *extractor
 		args    args
-		want    []*proto.Data
+		want    proto.TransformData
 		wantErr bool
 	}{
 		{
-			name: "douyin",
+			name: "kuaishou1",
 			args: args{
-				url: "https://www.douyin.com/video/6967223681286278436?previous_page=main_page&tab_name=home",
+				url: "https://v.kuaishou.com/diUCxC",
+			},
+		},
+		{
+			name: "kuaishou2",
+			args: args{
+				url: "https://v.kuaishou.com/hiZKok",
+			},
+		},
+		{
+			name: "kuaishou3",
+			args: args{
+				url: "https://v.kuaishou.com/gJ6yQL",
 			},
 		},
 	}
@@ -33,10 +45,10 @@ func Test_extractor_Extract(t *testing.T) {
 			if (err != nil) != tt.wantErr {
 				t.Errorf("extractor.Extract() error = %v, wantErr %v", err, tt.wantErr)
 				return
-			} else {
-				b, _ := json.Marshal(got)
-				fmt.Println(string(b))
 			}
+			res, _ := got.TransformData(tt.args.url, "")
+			b, _ := json.Marshal(res)
+			fmt.Println(string(b))
 		})
 	}
 }

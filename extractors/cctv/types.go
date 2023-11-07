@@ -104,7 +104,7 @@ type Chapter struct {
 	URL      string `json:"url"`
 }
 
-func (v VideoInfoRes) TransformData(url string, quality string) *proto.Data {
+func (v VideoInfoRes) TransformData(url string, quality string) (*proto.Data, error) {
 	var data proto.Data
 	data.Title = v.Title
 	totalDuration, _ := strconv.ParseFloat(v.Video.TotalLength, 64)
@@ -136,5 +136,5 @@ func (v VideoInfoRes) TransformData(url string, quality string) *proto.Data {
 			data.Streams = append(data.Streams, stream)
 		}
 	}
-	return &data
+	return &data, nil
 }

@@ -7,21 +7,17 @@ import (
 
 	"github.com/pkg/errors"
 	"github.com/wujiu2020/lux/extractors/cctv"
-	"github.com/wujiu2020/lux/extractors/douyin"
+	"github.com/wujiu2020/lux/extractors/iqiyi"
 	"github.com/wujiu2020/lux/extractors/proto"
+	"github.com/wujiu2020/lux/extractors/qq"
 	"github.com/wujiu2020/lux/utils"
-	// "github.com/wujiu2020/lux/extractors/iqiyi"
-	// "github.com/wujiu2020/lux/extractors/qq"
 )
 
 func init() {
-	// Register("iqiyi", iqiyi.New(iqiyi.SiteTypeIqiyi))
-	// Register("iq", iqiyi.New(iqiyi.SiteTypeIQ))
-	// Register("qq", qq.New())
-	douyin := douyin.New()
-	Register("douyin", douyin)
-	Register("iesdouyin", douyin)
 	Register("cctv", cctv.New())
+	Register("iqiyi", iqiyi.New(iqiyi.SiteTypeIqiyi))
+	Register("iq", iqiyi.New(iqiyi.SiteTypeIQ))
+	Register("qq", qq.New())
 }
 
 var lock sync.RWMutex
@@ -41,16 +37,16 @@ func Extract(u, quality string) (*proto.Data, error) {
 
 	uri, err := url.ParseRequestURI(u)
 	if err != nil {
-		return nil, errors.WithStack(err)
+		return nil, err
 	}
 	domain = utils.Domain(uri.Host)
 	extractor := extractorMap[domain]
 	if extractor == nil {
-		extractor = extractorMap[""]
+		return nil, errors.New("have not extractor")
 	}
 	videos, err := extractor.Extract(u)
 	if err != nil {
-		return nil, errors.WithStack(err)
+		return nil, err
 	}
-	return videos.TransformData(u, quality), nil
+	return videos.TransformData(u, quality)
 }

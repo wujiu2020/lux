@@ -29,5 +29,5 @@ type Extractor interface {
 
 type TransformData interface {
 	// Extract is the main function to extract the data.
-	TransformData(url string, quality string) *Data
+	TransformData(url string, quality string) (*Data, error)
 }

@@ -1,8 +1,6 @@
 package cctv
 
 import (
-	"encoding/json"
-	"fmt"
 	"testing"
 
 	"github.com/wujiu2020/lux/extractors/proto"
@@ -21,20 +19,23 @@ func Test_extractor_Extract(t *testing.T) {
 		{
 			name: "cctv",
 			args: args{
-				url: "https://v.cctv.com/2023/09/20/VIDEjvDBIZp7JnCVOtC0ifS4230920.shtml?spm=C12120290324.Ps6ySUNiMIzG.0.0",
+				url: "https://tv.cctv.com/2022/03/08/VIDEnptauE0cn7I2t7ycCAs8220308.shtml",
+			},
+		},
+		{
+			name: "cctv",
+			args: args{
+				url: "https://tv.cctv.com/2023/03/13/VIDEecCBy1ZBv5L8g16LFOCc230313.shtml",
 			},
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			e := &extractor{}
-			got, err := e.Extract(tt.args.url)
+			_, err := e.Extract(tt.args.url)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("extractor.Extract() error = %v, wantErr %v", err, tt.wantErr)
 				return
-			} else {
-				b, _ := json.Marshal(got)
-				fmt.Println(string(b))
 			}
 		})
 	}
