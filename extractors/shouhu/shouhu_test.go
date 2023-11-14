@@ -1,7 +1,6 @@
 package shouhu
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/wujiu2020/lux/extractors/proto"
@@ -45,12 +44,11 @@ func Test_extractor_Extract(t *testing.T) {
 				t.Errorf("extractor.Extract() error = %v, wantErr %v", err, tt.wantErr)
 				return
 			}
-			data, err := got.TransformData(tt.args.url, "")
+			_, err = got.TransformData(tt.args.url, "")
 			if (err != nil) != tt.wantErr {
 				t.Errorf("extractor.Extract() error = %v, wantErr %v", err, tt.wantErr)
 				return
 			}
-			fmt.Println(data)
 		})
 	}
 }

@@ -17,16 +17,33 @@ func Test_extractor_Extract(t *testing.T) {
 		wantErr bool
 	}{
 		{
-			name: "qq",
+			name: "qq1",
 			args: args{
-				url: "https://v.qq.com/x/cover/mzc00200fjo16c3/o00474v68ks.html",
+				url: "https://v.qq.com/x/cover/mzc00200my8s5sr/w0044vllwhj.html",
+			},
+		},
+		{
+			name: "qq2",
+			args: args{
+				url: "https://v.qq.com/x/cover/mzc00200c2ku08a/d0041bwpuu7.html",
+			},
+		},
+		{
+			name: "qq3",
+			args: args{
+				url: "https://v.qq.com/x/cover/mzc00200wl6js55/o0042uh3rfa.html",
 			},
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			e := &extractor{}
-			_, err := e.Extract(tt.args.url)
+			got, err := e.Extract(tt.args.url)
+			if (err != nil) != tt.wantErr {
+				t.Errorf("extractor.Extract() error = %v, wantErr %v", err, tt.wantErr)
+				return
+			}
+			_, err = got.TransformData(tt.args.url, "")
 			if (err != nil) != tt.wantErr {
 				t.Errorf("extractor.Extract() error = %v, wantErr %v", err, tt.wantErr)
 				return
