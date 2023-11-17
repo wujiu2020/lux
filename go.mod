@@ -6,7 +6,6 @@ require (
 	github.com/MercuryEngineering/CookieMonster v0.0.0-20180304172713-1584578b3403
 	github.com/PuerkitoBio/goquery v1.8.0
 	github.com/fatih/color v1.13.0
-	github.com/itchyny/gojq v0.12.13
 	github.com/kr/pretty v0.3.0
 	github.com/pkg/errors v0.9.1
 	golang.org/x/exp v0.0.0-20231006140011-7918f672742d
@@ -14,7 +13,6 @@ require (
 
 require (
 	github.com/andybalholm/cascadia v1.3.1 // indirect
-	github.com/itchyny/timefmt-go v0.1.5 // indirect
 	github.com/kr/text v0.2.0 // indirect
 	github.com/mattn/go-colorable v0.1.12 // indirect
 	github.com/mattn/go-isatty v0.0.19 // indirect
