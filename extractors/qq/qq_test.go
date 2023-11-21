@@ -43,11 +43,12 @@ func Test_extractor_Extract(t *testing.T) {
 				t.Errorf("extractor.Extract() error = %v, wantErr %v", err, tt.wantErr)
 				return
 			}
-			_, err = got.TransformData(tt.args.url, "")
+			data, err := got.TransformData(tt.args.url, "")
 			if (err != nil) != tt.wantErr {
 				t.Errorf("extractor.Extract() error = %v, wantErr %v", err, tt.wantErr)
 				return
 			}
+			t.Log(data)
 		})
 	}
 }

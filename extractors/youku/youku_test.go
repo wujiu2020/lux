@@ -1,4 +1,4 @@
-package cctv
+package youku
 
 import (
 	"testing"
@@ -12,20 +12,27 @@ func Test_extractor_Extract(t *testing.T) {
 	}
 	tests := []struct {
 		name    string
+		e       *extractor
 		args    args
-		want    *proto.Data
+		want    proto.TransformData
 		wantErr bool
 	}{
 		{
-			name: "cctv",
+			name: "youku1",
 			args: args{
-				url: "https://tv.cctv.com/2022/03/08/VIDEnptauE0cn7I2t7ycCAs8220308.shtml",
+				url: "https://v.youku.com/v_show/id_XNTIwNTIwMzQyMA==.html",
 			},
 		},
 		{
-			name: "cctv",
+			name: "youku2",
 			args: args{
-				url: "https://tv.cctv.com/2023/03/13/VIDEecCBy1ZBv5L8g16LFOCc230313.shtml",
+				url: "https://v.youku.com/v_show/id_XNTIwMjAyODUwMA==.html",
+			},
+		},
+		{
+			name: "youku3",
+			args: args{
+				url: "https://v.youku.com/v_show/id_XNTE5Nzg0ODAyOA==.html",
 			},
 		},
 	}
