@@ -1,0 +1,26 @@
+{
+    "webSite": "ppVideo_PC_site",
+    "queryParams": "&o=0&contCoprChl=pptv.web",
+    "username": "",
+    "token": "",
+    "startPosition": 256,
+    "resLiveFormat": "flv",
+    "resVodFormat": "m3u8",
+    "skipMovieTitle": true,
+    "autoPlay": false,
+    "useP2P": false,
+    "environment": "prd",
+    "useOnePlay": true,
+    "ppi": "302c3532",
+    "o": "0",
+    "playerVersion": "4.1.18",
+    "vvid": "56ab7e2c-b211-9068-6410-0f7409b19432",
+    "playApiConfig": {
+        "appid": "pptv.web.h5",
+        "channel": "sn.cultural",
+        "type": "mhpptv"
+    },
+    "useOnePlayPreview": false,
+    "playParamsShow": false,
+    "previewKey": ""
+}

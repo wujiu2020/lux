@@ -1,5 +1,7 @@
 package bilibili
 
+// import "github.com/wujiu2020/lux/extractors/proto"
+
 // type bangumiEpData struct {
 // 	Aid         int    `json:"aid"`
 // 	Cid         int    `json:"cid"`
@@ -92,4 +94,8 @@ package bilibili
 // 	32:  "清晰 480P",
 // 	16:  "流畅 360P",
 // 	15:  "流畅 360P",
+// }
+
+// func (v dashInfo) TransformData(url string, quality string) (*proto.Data, error) {
+// 	return nil, nil
 // }

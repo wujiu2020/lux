@@ -22,24 +22,24 @@ func Test_extractor_Extract(t *testing.T) {
 		want    []*proto.Data
 		wantErr bool
 	}{
-		// {
-		// 	name: "iqiyi1",
-		// 	args: args{
-		// 		url: "https://www.iqiyi.com/v_a5tnh7yyr8.html",
-		// 	},
-		// },
+		{
+			name: "iqiyi1",
+			args: args{
+				url: "https://www.iqiyi.com/v_a5tnh7yyr8.html",
+			},
+		},
 		{
 			name: "iqiyi2",
 			args: args{
 				url: "https://www.iqiyi.com/v_1lr0jb5povw.html",
 			},
 		},
-		// {
-		// 	name: "iqiyi3",
-		// 	args: args{
-		// 		url: "https://www.iqiyi.com/v_bte31fos94.html",
-		// 	},
-		// },
+		{
+			name: "iqiyi3",
+			args: args{
+				url: "https://www.iqiyi.com/v_bte31fos94.html",
+			},
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

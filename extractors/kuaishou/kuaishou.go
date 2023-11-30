@@ -27,7 +27,7 @@ func (e *extractor) Extract(url string) (proto.TransformData, error) {
 	headers := map[string]string{
 		"User-Agent": "Mozilla/5.0 (Ma cintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36",
 	}
-	headers["Cookie"] = "did=web_af8aa93deabc95f5d26eee7747574c57; didv=1699346345000; kpf=PC_WEB; clientid=3; kpn=KUAISHOU_VISION"
+	headers["Cookie"] = "did=web_78dc0711d2b146819feaa030598b1350; didv=1701046998000; kpf=PC_WEB; clientid=3; kpn=KUAISHOU_VISION"
 	html, err := request.Get(url, url, headers)
 	if err != nil {
 		return nil, errors.WithStack(err)

@@ -63,7 +63,6 @@ func youkuUps(vid string) (*youkuData, error) {
 		if err != nil {
 			return nil, errors.WithStack(err)
 		}
-		fmt.Println(string(html))
 		// data must be emptied before reassignment, otherwise it will contain the previous value(the 'error' data)
 		data = youkuData{}
 		if err = json.Unmarshal(html, &data); err != nil {
