@@ -1,24 +1,58 @@
 {
-  "name":"Jungledoge's Feathers",
-  "symbol":"Feathers",
-  "description":"Jungledoge's Feathers",
-  "image":"https://soloxx.s3.ap-southeast-1.amazonaws.com/Feathers/04.png",
-  "attributes":[
-    {"trait_type":"Pioneer NFT","value":"PNFT"}
+  "name": "Experiment #1038",
+  "symbol": "MUTANT",
+  "description": "Mutantmon: Unleashing the Potential of Hybrid Tokens on Solana",
+  "seller_fee_basis_points": 0,
+  "external_url": "https://www.mutantmon.com/",
+  "image": "https://shdw-drive.genesysgo.net/893AmBr2P9NVydpWc2TAkR3prwBtWMZH2A8RniDmduhn/1038_Light-Blue_Red-Frame.png",
+  "animation_url": "https://shdw-drive.genesysgo.net/893AmBr2P9NVydpWc2TAkR3prwBtWMZH2A8RniDmduhn/1038_Light-Blue_Red-Frame_Joyous.mp4",
+  "attributes": [
+    {
+      "trait_type": "Experiment #",
+      "value": "1038"
+    },
+    {
+      "trait_type": "Background",
+      "value": "Light Blue"
+    },
+    {
+      "trait_type": "Frame",
+      "value": "Red"
+    },
+    {
+      "trait_type": "Nature",
+      "value": "Joyous"
+    },
+    {
+      "trait_type": "Primary Type",
+      "value": "Fire"
+    },
+    {
+      "trait_type": "Secondary Type",
+      "value": ""
+    },
+    {
+      "trait_type": "Variant",
+      "value": "Normal"
+    }
   ],
-  "properties":{
-    "creators":[
+  "properties": {
+    "creators": [
       {
-        "address":"7wNmLPwpuUBoUQSD3vFnrw35nAaaBrGmyiKCmLv8DXxg",
-        "share":100
+        "address": "mmontYGNnVoud9eq2Nh7qD49Gmoe8wy7cqfSyPrBLS4",
+        "share": 100
       }
     ],
-    "files":[
+    "files": [
       {
-        "uri":"https://soloxx.s3.ap-southeast-1.amazonaws.com/Feathers/04.png",
-        "type":"image/png"
+        "uri": "https://shdw-drive.genesysgo.net/893AmBr2P9NVydpWc2TAkR3prwBtWMZH2A8RniDmduhn/1038_Light-Blue_Red-Frame.png",
+        "type": "image/png"
+      },
+      {
+        "uri": "https://shdw-drive.genesysgo.net/893AmBr2P9NVydpWc2TAkR3prwBtWMZH2A8RniDmduhn/1038_Light-Blue_Red-Frame_Joyous.mp4",
+        "type": "video/mp4"
       }
     ],
-    "category":"image"
+    "category": "video"
   }
 }
