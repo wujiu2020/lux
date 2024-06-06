@@ -1,0 +1,24 @@
+{
+  "name":"Jungledoge's Feathers",
+  "symbol":"Feathers",
+  "description":"Jungledoge's Feathers",
+  "image":"https://soloxx.s3.ap-southeast-1.amazonaws.com/Feathers/04.png",
+  "attributes":[
+    {"trait_type":"Pioneer NFT","value":"PNFT"}
+  ],
+  "properties":{
+    "creators":[
+      {
+        "address":"7wNmLPwpuUBoUQSD3vFnrw35nAaaBrGmyiKCmLv8DXxg",
+        "share":100
+      }
+    ],
+    "files":[
+      {
+        "uri":"https://soloxx.s3.ap-southeast-1.amazonaws.com/Feathers/04.png",
+        "type":"image/png"
+      }
+    ],
+    "category":"image"
+  }
+}
